@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Livre Académie</title>
+</head>
+
+<body>
+
+
+                            <!-- 0000000000000 Start HEADER 000000000000 -->
+
+
+    <header>
+
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+        </label>
+        <div class="sidebar">
+            <header>Plus d'options</header>
+            <div class="liens">
+    
+                <ul>
+    
+                    <li>Log in</li>
+                    <li>Sign up</li>
+                    <li>Français <i class="fa fa-caret-down"></i></li>
+    
+                </ul>
+    
+            </div>
+        </div>
+    
+        <nav class="navbar">
+            <h3>Français <i class="fa fa-caret-down"></i></h3>
+
+            <div class="box">
+                <img src="images/livrelogo.png" alt="la's logo" id="logo">
+            </div>
+
+            <ul>
+                <li>Log in</li>
+                <div class="ligne"></div>
+                <li>Sign up</li>
+            </ul>
+
+        </nav>
+    </header>
+
+                            <!-- 0000000000000 END HEADER 000000000000 -->
+
+
+
+                            <!-- 0000000000000 START MAIN 000000000000 -->
+
+                            <!-- 0000000000000 1st SECTION 000000000000 -->
+
+    <main>
+        <section id="section1">
+
+            <h1>T'as un Livre, T'es un Génie !</h1>
+
+            <form  autocomplete="off" onsubmit="onFormSubmit()">
+
+                <div class="all">
+
+                    <div class="order1">
+                        <input type="text" name="title" id="titre" placeholder="Titre">
+                        <p class="msjerr"></p><br>
+
+                        <input type="text" name="author" id="auteur" placeholder="Auteur">
+                        <p class="msjerr"></p><br>
+
+                        <input type="email" name="email" id="email" placeholder="name@example.com">
+                        <p class="msjerr"></p>
+                    </div>
+
+                    <div class="order2">
+                        <label for="date" id="dp">Date de publication :</label><br>
+                        <input type="date" name="date" id="date"><br>
+                        <p class="msjerr"></p><br>
+
+                        <!-- <label for="datalist">Langue</label> -->
+                        
+                        <select id="langues" name="langues">
+                            <option value="">-- Selecter une Langue --</option>
+                            <option value="Arabe">Arabe</option>
+                            <option value="Français">Français</option>
+                            <option value="Anglais">English</option>
+                        </select>
+                        
+                        <p class="msjerr"></p>
+                    </div>
+
+                    <div class="order3">
+
+                        <label for="type" id="types">Type :</label>
+
+                        <div class="radio"><br>
+                            
+                            <input type="radio" id="types" class="radio" value="Roman" name="typee">
+                            <label for="type">Roman</label>
+
+                            <input type="radio" id="types" class="radio" value="Essai" name="typee">
+                            <label for="type">Essai</label>
+
+                            <input type="radio" id="types" class="radio" value="Bande-Dessinée" name="typee">
+                            <label for="type">Bande-Dessinée</label>
+                            
+                        </div>
+                        <p class="msjerr"></p><br>
+                        
+
+                        <input type="text" name="prix" id="prix" placeholder="Prix">
+                        <p class="msjerr"></p>
+                        
+
+
+                    </div><br>
+
+                </div>
+
+
+            </form>
+            <div class="buttons">
+
+                <input type="button" onclick="Valider()" value="Valider" class="add">
+                <input type="button" onclick="onFormSubmit()" value="Ajouter" class="add">
+                <input type="button" onclick="resetForm()" value="Réinitialiser" class="add">
+                
+            </div>
+        </section>
+
+                                <!-- 0000000000000 2nd SECTION 000000000000 -->
+
+        <section id="section2">
+            <table class="list" id="storeList">
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Email d'auteur</th>
+                        <th>Date de publication</th>
+                        <th>Langue</th>
+                        <th>Type</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            
+            <button onclick="imprimmer()" id="print">Print</button>
+        </section>
+    </main>
+                            <!-- 0000000000000 END MAIN 000000000000 -->
+
+
+
+                            <!-- 0000000000000 START FOOTER 000000000000 -->
+    <footer>
+
+        <div class="socialmedia">
+
+            <img src="images/livrelogo.png" alt="la's logo" id="logoFF">
+
+            <div class="media">
+                <div class="some">
+                    <i class="fa fa-facebook-f"></i>
+                    <p class="pp">Livre Académie</p>
+                </div><br>
+
+                <div class="some">
+                    <i class=" fa fa-instagram"></i>
+                    <p class="p">@livre_academie</p>
+                </div><br>
+
+                <div class="some">
+                    <i class="fa fa-envelope"></i>
+                    <p class="p">livreacademie@contact.ma</p>
+                </div>
+            </div>
+
+        </div><br>
+        <p id="copyright"> © 2021 Livre Académie. All rights reserved </p>
+    </footer>
+
+    
+                                    <!-- 0000000000000 END FOOTER 000000000000 -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
